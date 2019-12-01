@@ -17,7 +17,7 @@ architecture Behavioral of ctrl_block is
 	
 	signal state : state_type;
 	signal first_val, second_val : STD_LOGIC_VECTOR(7 downto 0);
-	signal op : STD_lOGIC_VECTOR(1 downto 0);
+	signal op_val : STD_lOGIC_VECTOR(1 downto 0);
 	
 begin
 
@@ -25,28 +25,28 @@ begin
 	begin
 		
 		if reset = '1' then
-			state <= IDLE;
+			state <= WAIT_FIRST;
 		elsif clock'Event and clock = '1' then
 			
-			case(estado) is
+			case(state) is
 					
 				when WAIT_FIRST =>
 					if (received = '1') then
-							estado <= WAIT_SECOND;
+							state <= WAIT_SECOND;
 					end if;
 					
 				when WAIT_SECOND =>
 					if (received = '1') then
-							estado <= WAIT_OP;
+							state <= WAIT_OP;
 					end if;
 				
 				when WAIT_OP =>
 					if (received = '1') then
-							estado <= RESULT;
+							state <= RESULT;
 					end if;
 
 				when RESULT =>
-					estado <= WAIT_FIRST;
+					state <= WAIT_FIRST;
 			
 			end case;
 		
@@ -65,9 +65,12 @@ begin
 				second_val <= inp;
 			
 			when WAIT_OP =>
-				op <= inp;
+				op_val <= inp(1 downto 0);
 			
 			when RESULT =>
+			a <= first_val;
+			b <= second_val;
+			op <= op_val;
 			
 		end case;
 

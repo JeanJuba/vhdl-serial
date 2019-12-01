@@ -11,6 +11,16 @@ end main;
 
 architecture Behavioral of main is
 
+	component ctrl_block is
+    Port ( clock : in  STD_LOGIC;
+           reset : in  STD_LOGIC;
+           inp : in  STD_LOGIC_VECTOR (7 downto 0);
+			  received : in STD_LOGIC;
+           a : out  STD_LOGIC_VECTOR (7 downto 0);
+           b : out  STD_LOGIC_VECTOR (7 downto 0);
+			  op : out STD_LOGIC_VECTOR (1 downto 0));
+	end component;
+
 	 signal reset 			: STD_LOGIC := '1';
     signal rxd_signal  : STD_LOGIC;
     signal txd_signal  : STD_LOGIC;
@@ -62,9 +72,6 @@ begin
         else
             wr <= '0';        
         end if;
-    end process; 
-
-   
-
+    end process;  
 end Behavioral;
 

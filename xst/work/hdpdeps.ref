@@ -1,9 +1,16 @@
-V3 23
+V3 26
 FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/adder.vhd 2019/11/10.14:32:45 P.20131013
 EN work/adder 1574976661 FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/adder.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
 AR work/adder/Behavioral 1574976662 \
       FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/adder.vhd EN work/adder 1574976661
+FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/ctrl_block.vhd 2019/12/01.16:51:48 P.20131013
+EN work/ctrl_block 1575229912 \
+      FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/ctrl_block.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/ctrl_block/Behavioral 1575229913 \
+      FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/ctrl_block.vhd \
+      EN work/ctrl_block 1575229912
 FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/divider.vhd 2019/11/28.18:21:07 P.20131013
 EN work/divider 0 FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/divider.vhd \
       PB ieee/std_logic_1164 1381692176
