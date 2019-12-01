@@ -1,0 +1,38 @@
+V3 23
+FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/adder.vhd 2019/11/10.14:32:45 P.20131013
+EN work/adder 1574976661 FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/adder.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/adder/Behavioral 1574976662 \
+      FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/adder.vhd EN work/adder 1574976661
+FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/divider.vhd 2019/11/28.18:21:07 P.20131013
+EN work/divider 0 FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/divider.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/divider/Behavioral 0 \
+      FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/divider.vhd EN work/divider 0
+FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/multiplier.vhd 2019/11/28.18:32:00 P.20131013
+EN work/multiplier 1574976723 \
+      FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/multiplier.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/multiplier/Behavioral 1574976724 \
+      FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/multiplier.vhd \
+      EN work/multiplier 1574976723
+FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/mux_2bits.vhd 2019/11/11.21:42:08 P.20131013
+EN work/mux_2bits 0 FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/mux_2bits.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/mux_2bits/Behavioral 0 \
+      FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/mux_2bits.vhd EN work/mux_2bits 0
+FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/oper_block.vhd 2019/11/28.18:30:52 P.20131013
+EN work/oper_block 0 FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/oper_block.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/oper_block/Behavioral 0 \
+      FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/oper_block.vhd \
+      EN work/oper_block 0 CP adder CP subtractor CP multiplier CP divider \
+      CP mux_2bits
+FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/subtractor.vhd 2019/11/10.14:33:19 P.20131013
+EN work/subtractor 1574976663 \
+      FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/subtractor.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/subtractor/Behavioral 1574976664 \
+      FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/subtractor.vhd \
+      EN work/subtractor 1574976663

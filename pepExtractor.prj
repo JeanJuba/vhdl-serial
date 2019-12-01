@@ -1,0 +1,6 @@
+work	"adder.vhd"
+work	"divider.vhd"
+work	"multiplier.vhd"
+work	"mux_2bits.vhd"
+work	"oper_block.vhd"
+work	"subtractor.vhd"

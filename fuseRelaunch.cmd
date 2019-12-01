@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/jeanw/Desktop/VHDL/vhdl-serial/testbench_isim_beh.exe" -prj "C:/Users/jeanw/Desktop/VHDL/vhdl-serial/testbench_beh.prj" "work.testbench" 

@@ -1,0 +1,41 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/jeanw/Desktop/VHDL/vhdl-serial/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.56 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/jeanw/Desktop/VHDL/vhdl-serial/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.56 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/jeanw/Desktop/VHDL/vhdl-serial/adder.vhd" in Library work.
+Entity <adder> compiled.
+Entity <adder> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/jeanw/Desktop/VHDL/vhdl-serial/subtractor.vhd" in Library work.
+Entity <subtractor> compiled.
+Entity <subtractor> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/jeanw/Desktop/VHDL/vhdl-serial/multiplier.vhd" in Library work.
+Entity <multiplier> compiled.
+ERROR:HDLParsers:808 - "C:/Users/jeanw/Desktop/VHDL/vhdl-serial/multiplier.vhd" Line 14. * can not have such operands in this context.
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.75 secs
+ 
+--> 
+
+Total memory usage is 4491684 kilobytes
+
+Number of errors   :    1 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
