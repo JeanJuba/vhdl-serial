@@ -5,6 +5,7 @@ entity main is
     Port ( 
             RXD : in  STD_LOGIC;
 			   TXD : out STD_LOGIC;
+				RESET : in STD_LOGIC;
             CLOCK : in  STD_LOGIC;
 				LED : out  STD_LOGIC);
 end main;
@@ -20,6 +21,13 @@ architecture Behavioral of main is
            b : out  STD_LOGIC_VECTOR (7 downto 0);
 			  op : out STD_LOGIC_VECTOR (1 downto 0));
 	end component;
+	
+	component oper_block is
+    Port ( a : in  STD_LOGIC_VECTOR (7 downto 0);
+           b : in  STD_LOGIC_VECTOR (7 downto 0);
+           op : in  STD_LOGIC_VECTOR (1 downto 0);
+           s : out  STD_LOGIC_VECTOR (7 downto 0));
+	end component;
 
 	 signal reset 			: STD_LOGIC := '1';
     signal rxd_signal  : STD_LOGIC;
@@ -30,6 +38,8 @@ architecture Behavioral of main is
     signal ready       : STD_LOGIC;	
     signal outp        : STD_LOGIC_VECTOR(7 downto 0);
     signal inp		   : STD_LOGIC_VECTOR(7 downto 0);
+	 
+	 signal val_a, val_b, op, result : STD_LOGIC_VECTOR(7 downto 0);
 
 begin
 	 
@@ -44,7 +54,7 @@ begin
 			RXD => rxd_signal, 
 			TXD => txd_signal, 
 			EOT => eot, 
-			INP => "00000110", 
+			INP => result, 
 			READY => ready, 
 			WR => wr
         );
@@ -73,5 +83,10 @@ begin
             wr <= '0';        
         end if;
     end process;  
+	 
+	 
+	 control : ctrl_block port map(CLOCK, RESET, outp, eoc, val_a, val_b, op);
+	 operation : oper_block port map (val_a, val_b, op, result);
+	 
 end Behavioral;
 
