@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\m95952\Desktop\vhdl-serial-master\main.ncd
+OUTFILE=C:\Users\m95952\Desktop\vhdl-serial-master\main.bit
+FAMILY=Spartan3
+PART=xc3s1000-4ft256
+WORKINGDIR=C:\Users\m95952\Desktop\vhdl-serial-master
+LICENSE=ISE
+USER_INFO=211621037_1777539686_210693623_261

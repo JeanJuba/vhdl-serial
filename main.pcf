@@ -1,0 +1,14 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Dec 03 20:19:42 2019
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "LED" LOCATE = SITE "P11" LEVEL 1;
+COMP "RXD" LOCATE = SITE "T13" LEVEL 1;
+PIN RXD_pin<0> = BEL "RXD" PINNAME PAD;
+PIN "RXD_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "TXD" LOCATE = SITE "R13" LEVEL 1;
+COMP "CLOCK" LOCATE = SITE "T9" LEVEL 1;
+NET "CLOCK_BUFGP/IBUFG" BEL "CLOCK_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+

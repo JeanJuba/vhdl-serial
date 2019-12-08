@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/jeanw/Desktop/VHDL/vhdl-serial/Minimal_UART_CORE.xst" -ofn "C:/Users/jeanw/Desktop/VHDL/vhdl-serial/Minimal_UART_CORE.syr" 

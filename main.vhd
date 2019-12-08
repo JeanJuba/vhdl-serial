@@ -1,11 +1,11 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.std_logic_unsigned.all;
 
 entity main is
     Port ( 
             RXD : in  STD_LOGIC;
 			   TXD : out STD_LOGIC;
-				RESET : in STD_LOGIC;
             CLOCK : in  STD_LOGIC;
 				LED : out  STD_LOGIC);
 end main;
@@ -13,8 +13,7 @@ end main;
 architecture Behavioral of main is
 
 	component ctrl_block is
-    Port ( clock : in  STD_LOGIC;
-           reset : in  STD_LOGIC;
+    Port ( reset : in  STD_LOGIC;
            inp : in  STD_LOGIC_VECTOR (7 downto 0);
 			  received : in STD_LOGIC;
            a : out  STD_LOGIC_VECTOR (7 downto 0);
@@ -29,7 +28,7 @@ architecture Behavioral of main is
            s : out  STD_LOGIC_VECTOR (7 downto 0));
 	end component;
 
-	 signal reset 			: STD_LOGIC := '1';
+	 signal reset 		  : STD_LOGIC := '1';
     signal rxd_signal  : STD_LOGIC;
     signal txd_signal  : STD_LOGIC;
     signal eoc         : STD_LOGIC; 
@@ -39,7 +38,9 @@ architecture Behavioral of main is
     signal outp        : STD_LOGIC_VECTOR(7 downto 0);
     signal inp		   : STD_LOGIC_VECTOR(7 downto 0);
 	 
-	 signal val_a, val_b, op, result : STD_LOGIC_VECTOR(7 downto 0);
+	 signal val_a, val_b : STD_LOGIC_VECTOR(7 downto 0);
+	 signal result : STD_LOGIC_VECTOR(7 downto 0) := "00001111";
+	 signal op : STD_LOGIC_VECTOR(1 downto 0);
 
 begin
 	 
@@ -65,18 +66,14 @@ begin
 				wr <= '1';
 				
             case outp is
-                when X"A0" | "00001100" | "00110000" => 
+                when X"FF" | "00001100" | "00110000" => 
                     LED <= '1';
                     reset <= '0';
-                when X"A1" | "10001100" | "00110001" => 
+						  
+                when X"FE" | "10001100" | "00110001" => 
                     LED <= '0';
-                    reset <= '0';                    
-                when X"A2" | "01001100" | "00110010" => 
-                    LED <= '1';
-                    reset <= '0';
-                when X"A3" | "00101100" | "00110011" => 
-                    LED <= '0';
-                    reset <= '1';
+                    reset <= '1';      
+					 
 				when others =>
             end case;	
         else
@@ -85,7 +82,7 @@ begin
     end process;  
 	 
 	 
-	 control : ctrl_block port map(CLOCK, RESET, outp, eoc, val_a, val_b, op);
+	 control : ctrl_block port map(reset, outp, eoc, val_a, val_b, op);
 	 operation : oper_block port map (val_a, val_b, op, result);
 	 
 end Behavioral;

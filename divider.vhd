@@ -12,7 +12,7 @@ architecture Behavioral of divider is
 
 begin
 
-	s <= std_logic_vector(to_unsigned(to_integer(unsigned(a) / unsigned(b)),8));
-
+	--s <= std_logic_vector(to_unsigned(to_integer(unsigned(a) / unsigned(b)),8));
+	s <= a;
 end Behavioral;
 

@@ -1,45 +1,75 @@
-V3 26
-FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/adder.vhd 2019/11/10.14:32:45 P.20131013
-EN work/adder 1574976661 FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/adder.vhd \
+V3 48
+FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/adder.vhd 2019/12/07.20:34:33 P.20131013
+EN work/adder 1575762722 FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/adder.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/adder/Behavioral 1574976662 \
-      FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/adder.vhd EN work/adder 1574976661
-FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/ctrl_block.vhd 2019/12/01.16:51:48 P.20131013
-EN work/ctrl_block 1575229912 \
+AR work/adder/Behavioral 1575762723 \
+      FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/adder.vhd EN work/adder 1575762722
+FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/BRG.vhd 2019/12/07.20:34:33 P.20131013
+EN work/BR_GENERATOR 1575763049 \
+      FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/BRG.vhd PB ieee/std_logic_1164 1381692176 \
+      PB ieee/std_logic_arith 1381692177 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/BR_GENERATOR/PRINCIPAL 1575763050 \
+      FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/BRG.vhd EN work/BR_GENERATOR 1575763049
+FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/ctrl_block.vhd 2019/12/07.20:34:34 P.20131013
+EN work/ctrl_block 1575762339 \
       FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/ctrl_block.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/ctrl_block/Behavioral 1575229913 \
+AR work/ctrl_block/Behavioral 1575762340 \
       FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/ctrl_block.vhd \
-      EN work/ctrl_block 1575229912
-FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/divider.vhd 2019/11/28.18:21:07 P.20131013
-EN work/divider 0 FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/divider.vhd \
-      PB ieee/std_logic_1164 1381692176
-AR work/divider/Behavioral 0 \
-      FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/divider.vhd EN work/divider 0
-FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/multiplier.vhd 2019/11/28.18:32:00 P.20131013
-EN work/multiplier 1574976723 \
+      EN work/ctrl_block 1575762339
+FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/divider.vhd 2019/12/07.20:34:34 P.20131013
+EN work/divider 1575762728 FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/divider.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/divider/Behavioral 1575762729 \
+      FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/divider.vhd EN work/divider 1575762728
+FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/multiplier.vhd 2019/12/07.20:34:35 P.20131013
+EN work/multiplier 1575762726 \
       FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/multiplier.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/multiplier/Behavioral 1574976724 \
+AR work/multiplier/Behavioral 1575762727 \
       FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/multiplier.vhd \
-      EN work/multiplier 1574976723
-FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/mux_2bits.vhd 2019/11/11.21:42:08 P.20131013
-EN work/mux_2bits 0 FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/mux_2bits.vhd \
+      EN work/multiplier 1575762726
+FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/mux_2bits.vhd 2019/12/07.20:34:35 P.20131013
+EN work/mux_2bits 1575762730 \
+      FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/mux_2bits.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/mux_2bits/Behavioral 0 \
-      FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/mux_2bits.vhd EN work/mux_2bits 0
-FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/oper_block.vhd 2019/11/28.18:30:52 P.20131013
-EN work/oper_block 0 FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/oper_block.vhd \
-      PB ieee/std_logic_1164 1381692176
-AR work/oper_block/Behavioral 0 \
+AR work/mux_2bits/Behavioral 1575762731 \
+      FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/mux_2bits.vhd EN work/mux_2bits 1575762730
+FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/oper_block.vhd 2019/12/07.20:34:35 P.20131013
+EN work/oper_block 1575762732 \
       FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/oper_block.vhd \
-      EN work/oper_block 0 CP adder CP subtractor CP multiplier CP divider \
+      PB ieee/std_logic_1164 1381692176
+AR work/oper_block/Behavioral 1575762733 \
+      FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/oper_block.vhd \
+      EN work/oper_block 1575762732 CP adder CP subtractor CP multiplier CP divider \
       CP mux_2bits
-FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/subtractor.vhd 2019/11/10.14:33:19 P.20131013
-EN work/subtractor 1574976663 \
+FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/serial.vhd 2019/12/07.20:34:36 P.20131013
+EN work/Minimal_UART_CORE 1575763051 \
+      FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/serial.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/Minimal_UART_CORE/PRINCIPAL 1575763052 \
+      FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/serial.vhd \
+      EN work/Minimal_UART_CORE 1575763051 CP BR_GENERATOR
+FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/subtractor.vhd 2019/12/07.20:34:36 P.20131013
+EN work/subtractor 1575762724 \
       FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/subtractor.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/subtractor/Behavioral 1574976664 \
+AR work/subtractor/Behavioral 1575762725 \
       FL C:/Users/jeanw/Desktop/VHDL/vhdl-serial/subtractor.vhd \
-      EN work/subtractor 1574976663
+      EN work/subtractor 1575762724
+FL C:/Users/m95952/Desktop/vhdl-serial-master/adder.vhd 2019/12/02.22:59:11 P.20131013
+FL C:/Users/m95952/Desktop/vhdl-serial-master/BRG.vhd 2019/12/02.22:59:11 P.20131013
+FL C:/Users/m95952/Desktop/vhdl-serial-master/ctrl_block.vhd 2019/12/03.20:19:24 P.20131013
+FL C:/Users/m95952/Desktop/vhdl-serial-master/divider.vhd 2019/12/03.18:25:19 P.20131013
+FL C:/Users/m95952/Desktop/vhdl-serial-master/main.vhd 2019/12/03.20:11:03 P.20131013
+EN work/main 1575415187 FL C:/Users/m95952/Desktop/vhdl-serial-master/main.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/main/Behavioral 1575415188 \
+      FL C:/Users/m95952/Desktop/vhdl-serial-master/main.vhd EN work/main 1575415187 \
+      CP work/Minimal_UART_CORE CP ctrl_block CP oper_block
+FL C:/Users/m95952/Desktop/vhdl-serial-master/multiplier.vhd 2019/12/02.22:59:11 P.20131013
+FL C:/Users/m95952/Desktop/vhdl-serial-master/mux_2bits.vhd 2019/12/02.22:59:11 P.20131013
+FL C:/Users/m95952/Desktop/vhdl-serial-master/oper_block.vhd 2019/12/02.22:59:11 P.20131013
+FL C:/Users/m95952/Desktop/vhdl-serial-master/serial.vhd 2019/12/02.22:59:11 P.20131013
+FL C:/Users/m95952/Desktop/vhdl-serial-master/subtractor.vhd 2019/12/02.22:59:11 P.20131013

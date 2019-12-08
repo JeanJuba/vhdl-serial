@@ -1,0 +1,733 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Reading design: main.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "main.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "main"
+Output Format                      : NGC
+Target Device                      : xc3s1000-4-ft256
+
+---- Source Options
+Top Module Name                    : main
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/m95952/Desktop/vhdl-serial-master/adder.vhd" in Library work.
+Architecture behavioral of Entity adder is up to date.
+Compiling vhdl file "C:/Users/m95952/Desktop/vhdl-serial-master/subtractor.vhd" in Library work.
+Architecture behavioral of Entity subtractor is up to date.
+Compiling vhdl file "C:/Users/m95952/Desktop/vhdl-serial-master/multiplier.vhd" in Library work.
+Architecture behavioral of Entity multiplier is up to date.
+Compiling vhdl file "C:/Users/m95952/Desktop/vhdl-serial-master/divider.vhd" in Library work.
+Architecture behavioral of Entity divider is up to date.
+Compiling vhdl file "C:/Users/m95952/Desktop/vhdl-serial-master/mux_2bits.vhd" in Library work.
+Architecture behavioral of Entity mux_2bits is up to date.
+Compiling vhdl file "C:/Users/m95952/Desktop/vhdl-serial-master/BRG.vhd" in Library work.
+Architecture principal of Entity br_generator is up to date.
+Compiling vhdl file "C:/Users/m95952/Desktop/vhdl-serial-master/serial.vhd" in Library work.
+Architecture principal of Entity minimal_uart_core is up to date.
+Compiling vhdl file "C:/Users/m95952/Desktop/vhdl-serial-master/ctrl_block.vhd" in Library work.
+Entity <ctrl_block> compiled.
+Entity <ctrl_block> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/m95952/Desktop/vhdl-serial-master/oper_block.vhd" in Library work.
+Architecture behavioral of Entity oper_block is up to date.
+Compiling vhdl file "C:/Users/m95952/Desktop/vhdl-serial-master/main.vhd" in Library work.
+Architecture behavioral of Entity main is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <main> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Minimal_UART_CORE> in library <work> (architecture <PRINCIPAL>).
+
+Analyzing hierarchy for entity <ctrl_block> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <oper_block> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <BR_GENERATOR> in library <work> (architecture <principal>) with generics.
+	DIVIDER_WIDTH = 16
+
+Analyzing hierarchy for entity <adder> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <subtractor> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <multiplier> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <divider> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <mux_2bits> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <main> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "C:/Users/m95952/Desktop/vhdl-serial-master/main.vhd" line 63: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <outp>
+Entity <main> analyzed. Unit <main> generated.
+
+Analyzing Entity <Minimal_UART_CORE> in library <work> (Architecture <PRINCIPAL>).
+WARNING:Xst:819 - "C:/Users/m95952/Desktop/vhdl-serial-master/serial.vhd" line 105: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <RECEIVING>
+WARNING:Xst:819 - "C:/Users/m95952/Desktop/vhdl-serial-master/serial.vhd" line 176: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <DATA>
+WARNING:Xst:819 - "C:/Users/m95952/Desktop/vhdl-serial-master/serial.vhd" line 190: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <INP>
+Entity <Minimal_UART_CORE> analyzed. Unit <Minimal_UART_CORE> generated.
+
+Analyzing generic Entity <BR_GENERATOR> in library <work> (Architecture <principal>).
+	DIVIDER_WIDTH = 16
+Entity <BR_GENERATOR> analyzed. Unit <BR_GENERATOR> generated.
+
+Analyzing Entity <ctrl_block> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "C:/Users/m95952/Desktop/vhdl-serial-master/ctrl_block.vhd" line 49: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <inp>
+Entity <ctrl_block> analyzed. Unit <ctrl_block> generated.
+
+Analyzing Entity <oper_block> in library <work> (Architecture <behavioral>).
+Entity <oper_block> analyzed. Unit <oper_block> generated.
+
+Analyzing Entity <adder> in library <work> (Architecture <behavioral>).
+Entity <adder> analyzed. Unit <adder> generated.
+
+Analyzing Entity <subtractor> in library <work> (Architecture <behavioral>).
+Entity <subtractor> analyzed. Unit <subtractor> generated.
+
+Analyzing Entity <multiplier> in library <work> (Architecture <behavioral>).
+Entity <multiplier> analyzed. Unit <multiplier> generated.
+
+Analyzing Entity <divider> in library <work> (Architecture <behavioral>).
+Entity <divider> analyzed. Unit <divider> generated.
+
+Analyzing Entity <mux_2bits> in library <work> (Architecture <behavioral>).
+Entity <mux_2bits> analyzed. Unit <mux_2bits> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <ctrl_block>.
+    Related source file is "C:/Users/m95952/Desktop/vhdl-serial-master/ctrl_block.vhd".
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 4                                              |
+    | Inputs             | 0                                              |
+    | Outputs            | 4                                              |
+    | Clock              | received                  (rising_edge)        |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | wait_first                                     |
+    | Power Up State     | wait_first                                     |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+WARNING:Xst:737 - Found 8-bit latch for signal <second_val>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 8-bit latch for signal <first_val>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 2-bit latch for signal <op_val>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <ctrl_block> synthesized.
+
+
+Synthesizing Unit <BR_GENERATOR>.
+    Related source file is "C:/Users/m95952/Desktop/vhdl-serial-master/BRG.vhd".
+    Found 1-bit register for signal <CLK_SERIAL>.
+    Found 1-bit register for signal <CLK_TXD>.
+    Found 16-bit up counter for signal <COUNT_BRG>.
+    Found 16-bit up counter for signal <COUNT_BRG_TXD>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   2 D-type flip-flop(s).
+Unit <BR_GENERATOR> synthesized.
+
+
+Synthesizing Unit <adder>.
+    Related source file is "C:/Users/m95952/Desktop/vhdl-serial-master/adder.vhd".
+    Found 8-bit adder for signal <s>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <adder> synthesized.
+
+
+Synthesizing Unit <subtractor>.
+    Related source file is "C:/Users/m95952/Desktop/vhdl-serial-master/subtractor.vhd".
+    Found 8-bit subtractor for signal <s$addsub0000> created at line 17.
+    Found 8-bit comparator greater for signal <s$cmp_gt0000> created at line 17.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <subtractor> synthesized.
+
+
+Synthesizing Unit <multiplier>.
+    Related source file is "C:/Users/m95952/Desktop/vhdl-serial-master/multiplier.vhd".
+    Found 8x8-bit multiplier for signal <s$mult0000> created at line 15.
+    Summary:
+	inferred   1 Multiplier(s).
+Unit <multiplier> synthesized.
+
+
+Synthesizing Unit <divider>.
+    Related source file is "C:/Users/m95952/Desktop/vhdl-serial-master/divider.vhd".
+WARNING:Xst:647 - Input <b> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <divider> synthesized.
+
+
+Synthesizing Unit <mux_2bits>.
+    Related source file is "C:/Users/m95952/Desktop/vhdl-serial-master/mux_2bits.vhd".
+    Found 8-bit 4-to-1 multiplexer for signal <s>.
+    Summary:
+	inferred   8 Multiplexer(s).
+Unit <mux_2bits> synthesized.
+
+
+Synthesizing Unit <Minimal_UART_CORE>.
+    Related source file is "C:/Users/m95952/Desktop/vhdl-serial-master/serial.vhd".
+WARNING:Xst:1780 - Signal <EOC2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <EOC1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:737 - Found 1-bit latch for signal <EOCS>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <RECEIVING>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 8-bit latch for signal <OUTP>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 8-bit latch for signal <INPL>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 10-bit latch for signal <NEXT_STATE>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <ATUAL_STATE_TXD> of Case statement line 192 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <ATUAL_STATE_TXD> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Using one-hot encoding for signal <ATUAL_STATE_TXD>.
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <ATUAL_STATE_TXD> of Case statement line 192 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <ATUAL_STATE_TXD> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <ATUAL_STATE_TXD> of Case statement line 192 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <ATUAL_STATE_TXD> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <ATUAL_STATE_TXD> of Case statement line 192 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <ATUAL_STATE_TXD> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <ATUAL_STATE> of Case statement line 108 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <ATUAL_STATE> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Using one-hot encoding for signal <ATUAL_STATE>.
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <ATUAL_STATE> of Case statement line 108 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <ATUAL_STATE> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <ATUAL_STATE> of Case statement line 108 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <ATUAL_STATE> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Found 1-bit register for signal <EOC>.
+    Found 1-bit register for signal <TXD>.
+    Found 10-bit register for signal <ATUAL_STATE>.
+    Found 10-bit register for signal <ATUAL_STATE_TXD>.
+    Found 8-bit register for signal <DATA>.
+    Found 1-bit register for signal <START>.
+    Found 1-bit register for signal <TX_ENABLE>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <Minimal_UART_CORE> synthesized.
+
+
+Synthesizing Unit <oper_block>.
+    Related source file is "C:/Users/m95952/Desktop/vhdl-serial-master/oper_block.vhd".
+Unit <oper_block> synthesized.
+
+
+Synthesizing Unit <main>.
+    Related source file is "C:/Users/m95952/Desktop/vhdl-serial-master/main.vhd".
+WARNING:Xst:646 - Signal <ready> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <inp> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <eot> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:737 - Found 1-bit latch for signal <reset>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <LED>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+Unit <main> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 1
+ 8x8-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 2
+ 8-bit adder                                           : 1
+ 8-bit subtractor                                      : 1
+# Counters                                             : 2
+ 16-bit up counter                                     : 2
+# Registers                                            : 9
+ 1-bit register                                        : 6
+ 10-bit register                                       : 2
+ 8-bit register                                        : 1
+# Latches                                              : 10
+ 1-bit latch                                           : 4
+ 10-bit latch                                          : 1
+ 2-bit latch                                           : 1
+ 8-bit latch                                           : 4
+# Comparators                                          : 1
+ 8-bit comparator greater                              : 1
+# Multiplexers                                         : 1
+ 8-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <control/state/FSM> on signal <state[1:4]> with one-hot encoding.
+-------------------------
+ State       | Encoding
+-------------------------
+ wait_first  | 0001
+ wait_second | 0010
+ wait_op     | 0100
+ result      | 1000
+-------------------------
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Multipliers                                          : 1
+ 8x8-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 2
+ 8-bit adder                                           : 1
+ 8-bit subtractor                                      : 1
+# Counters                                             : 2
+ 16-bit up counter                                     : 2
+# Registers                                            : 34
+ Flip-Flops                                            : 34
+# Latches                                              : 10
+ 1-bit latch                                           : 4
+ 10-bit latch                                          : 1
+ 2-bit latch                                           : 1
+ 8-bit latch                                           : 4
+# Comparators                                          : 1
+ 8-bit comparator greater                              : 1
+# Multiplexers                                         : 1
+ 8-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <main> ...
+
+Optimizing unit <BR_GENERATOR> ...
+
+Optimizing unit <ctrl_block> ...
+
+Optimizing unit <Minimal_UART_CORE> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block main, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 70
+ Flip-Flops                                            : 70
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : main.ngr
+Top Level Output File Name         : main
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 4
+
+Cell Usage :
+# BELS                             : 239
+#      GND                         : 1
+#      INV                         : 3
+#      LUT1                        : 30
+#      LUT2                        : 27
+#      LUT3                        : 19
+#      LUT4                        : 51
+#      LUT4_D                      : 4
+#      MUXCY                       : 44
+#      MUXF5                       : 11
+#      VCC                         : 1
+#      XORCY                       : 48
+# FlipFlops/Latches                : 118
+#      FD                          : 20
+#      FDC                         : 3
+#      FDC_1                       : 1
+#      FDCE_1                      : 1
+#      FDE                         : 8
+#      FDP                         : 1
+#      FDR                         : 29
+#      FDRS                        : 5
+#      FDS                         : 1
+#      FDSE                        : 1
+#      LD                          : 48
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 3
+#      IBUF                        : 1
+#      OBUF                        : 2
+# MULTs                            : 1
+#      MULT18X18                   : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s1000ft256-4 
+
+ Number of Slices:                       88  out of   7680     1%  
+ Number of Slice Flip Flops:            118  out of  15360     0%  
+ Number of 4 input LUTs:                134  out of  15360     0%  
+ Number of IOs:                           4
+ Number of bonded IOBs:                   4  out of    173     2%  
+ Number of MULT18X18s:                    1  out of     24     4%  
+ Number of GCLKs:                         2  out of      8    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------+-------------------------------+-------+
+Clock Signal                               | Clock buffer(FF name)         | Load  |
+-------------------------------------------+-------------------------------+-------+
+serial/EOC                                 | NONE(reset)                   | 6     |
+control/state_FSM_FFd3                     | NONE(control/second_val_7)    | 8     |
+control/state_FSM_FFd4                     | NONE(control/first_val_7)     | 8     |
+control/state_FSM_FFd2                     | NONE(control/op_val_1)        | 2     |
+CLOCK                                      | BUFGP                         | 37    |
+serial/ATUAL_STATE_9                       | NONE(serial/OUTP_7)           | 8     |
+serial/ATUAL_STATE_TXD_0                   | NONE(serial/INPL_7)           | 8     |
+serial/RX_CK_ENABLE(serial/RX_CK_ENABLE1:O)| NONE(*)(serial/NEXT_STATE_9)  | 12    |
+serial/BRG/CLK_SERIAL                      | NONE(serial/DATA_7)           | 18    |
+RXD                                        | IBUF+BUFG                     | 1     |
+serial/BRG/CLK_TXD                         | NONE(serial/ATUAL_STATE_TXD_9)| 10    |
+-------------------------------------------+-------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+----------------------------------------------------+-----------------------------+-------+
+Control Signal                                      | Buffer(FF name)             | Load  |
+----------------------------------------------------+-----------------------------+-------+
+reset(reset:Q)                                      | NONE(control/state_FSM_FFd1)| 4     |
+serial/ATUAL_STATE_TXD_9(serial/ATUAL_STATE_TXD_9:Q)| NONE(serial/TX_ENABLE)      | 1     |
+serial/EOCS(serial/EOCS:Q)                          | NONE(serial/START)          | 1     |
+----------------------------------------------------+-----------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 8.954ns (Maximum Frequency: 111.682MHz)
+   Minimum input arrival time before clock: 1.901ns
+   Maximum output required time after clock: 7.165ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'serial/EOC'
+  Clock period: 3.923ns (frequency: 254.907MHz)
+  Total number of paths / destination ports: 6 / 6
+-------------------------------------------------------------------------
+Delay:               3.923ns (Levels of Logic = 2)
+  Source:            reset (LATCH)
+  Destination:       reset (LATCH)
+  Source Clock:      serial/EOC falling
+  Destination Clock: serial/EOC falling
+
+  Data Path: reset to reset
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               5   0.633   1.116  reset (reset)
+     LUT4:I1->O            1   0.551   0.869  reset_mux000117_SW0 (N20)
+     LUT4:I2->O            1   0.551   0.000  reset_mux000117 (reset_mux0001)
+     LD:D                      0.203          reset
+    ----------------------------------------
+    Total                      3.923ns (1.938ns logic, 1.985ns route)
+                                       (49.4% logic, 50.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLOCK'
+  Clock period: 8.954ns (frequency: 111.682MHz)
+  Total number of paths / destination ports: 914 / 73
+-------------------------------------------------------------------------
+Delay:               4.477ns (Levels of Logic = 1)
+  Source:            serial/TX_ENABLE (FF)
+  Destination:       serial/BRG/COUNT_BRG_TXD_0 (FF)
+  Source Clock:      CLOCK falling
+  Destination Clock: CLOCK rising
+
+  Data Path: serial/TX_ENABLE to serial/BRG/COUNT_BRG_TXD_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE_1:C->Q           4   0.720   0.943  serial/TX_ENABLE (serial/TX_ENABLE)
+     LUT4:I3->O           16   0.551   1.237  serial/BRG/COUNT_BRG_TXD_or000065 (serial/BRG/COUNT_BRG_TXD_or0000)
+     FDR:R                     1.026          serial/BRG/COUNT_BRG_TXD_0
+    ----------------------------------------
+    Total                      4.477ns (2.297ns logic, 2.180ns route)
+                                       (51.3% logic, 48.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'serial/BRG/CLK_SERIAL'
+  Clock period: 1.800ns (frequency: 555.556MHz)
+  Total number of paths / destination ports: 7 / 7
+-------------------------------------------------------------------------
+Delay:               1.800ns (Levels of Logic = 0)
+  Source:            serial/DATA_7 (FF)
+  Destination:       serial/DATA_6 (FF)
+  Source Clock:      serial/BRG/CLK_SERIAL rising
+  Destination Clock: serial/BRG/CLK_SERIAL rising
+
+  Data Path: serial/DATA_7 to serial/DATA_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.720   0.877  serial/DATA_7 (serial/DATA_7)
+     FDE:D                     0.203          serial/DATA_6
+    ----------------------------------------
+    Total                      1.800ns (0.923ns logic, 0.877ns route)
+                                       (51.3% logic, 48.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'serial/BRG/CLK_TXD'
+  Clock period: 2.947ns (frequency: 339.328MHz)
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Delay:               2.947ns (Levels of Logic = 1)
+  Source:            serial/ATUAL_STATE_TXD_0 (FF)
+  Destination:       serial/ATUAL_STATE_TXD_1 (FF)
+  Source Clock:      serial/BRG/CLK_TXD rising
+  Destination Clock: serial/BRG/CLK_TXD rising
+
+  Data Path: serial/ATUAL_STATE_TXD_0 to serial/ATUAL_STATE_TXD_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDSE:C->Q            10   0.720   1.473  serial/ATUAL_STATE_TXD_0 (serial/ATUAL_STATE_TXD_0)
+     LUT2:I0->O            1   0.551   0.000  serial/NEXT_STATE_TXD<1>1 (serial/NEXT_STATE_TXD<1>)
+     FD:D                      0.203          serial/ATUAL_STATE_TXD_1
+    ----------------------------------------
+    Total                      2.947ns (1.474ns logic, 1.473ns route)
+                                       (50.0% logic, 50.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'serial/BRG/CLK_SERIAL'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.901ns (Levels of Logic = 1)
+  Source:            RXD (PAD)
+  Destination:       serial/DATA_7 (FF)
+  Destination Clock: serial/BRG/CLK_SERIAL rising
+
+  Data Path: RXD to serial/DATA_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   0.821   0.877  RXD_IBUF (RXD_IBUF1)
+     FDE:D                     0.203          serial/DATA_7
+    ----------------------------------------
+    Total                      1.901ns (1.024ns logic, 0.877ns route)
+                                       (53.9% logic, 46.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLOCK'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              7.165ns (Levels of Logic = 1)
+  Source:            serial/TXD (FF)
+  Destination:       TXD (PAD)
+  Source Clock:      CLOCK rising
+
+  Data Path: serial/TXD to TXD
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              1   0.720   0.801  serial/TXD (serial/TXD)
+     OBUF:I->O                 5.644          TXD_OBUF (TXD)
+    ----------------------------------------
+    Total                      7.165ns (6.364ns logic, 0.801ns route)
+                                       (88.8% logic, 11.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'serial/EOC'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              7.154ns (Levels of Logic = 1)
+  Source:            LED (LATCH)
+  Destination:       LED (PAD)
+  Source Clock:      serial/EOC falling
+
+  Data Path: LED to LED
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               2   0.633   0.877  LED (LED_OBUF)
+     OBUF:I->O                 5.644          LED_OBUF (LED)
+    ----------------------------------------
+    Total                      7.154ns (6.277ns logic, 0.877ns route)
+                                       (87.7% logic, 12.3% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.74 secs
+ 
+--> 
+
+Total memory usage is 262252 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   21 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
+
